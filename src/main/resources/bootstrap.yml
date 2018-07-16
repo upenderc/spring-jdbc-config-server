@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: jdbc
+  application:
+    name: config-jdbc-server
+  cloud:
+    config:
+      label: master
+      server:
+        bootstrap: true
+      profile: dev
+  datasource:
+    dbcp2:
+      driver: org.sqlite.JDBC
+      pool-prepared-statements: true
+      default-auto-commit: true
+      max-idle: 1
+      max-total: 1
+    url: jdbc:sqlite:${dbloc}
+        
+    

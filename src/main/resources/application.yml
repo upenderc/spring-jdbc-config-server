@@ -1,0 +1,5 @@
+app:
+  greet:
+    name: Default
+server:
+  port: 9081
